@@ -24,10 +24,19 @@ f.write('''<!DOCTYPE html>
         rel="stylesheet" 
         href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
     />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+   <style>
+   html, body, #map {
+      height:100%;
+      width:100%;
+      padding:0px;
+      margin:0px;
+   } 
+   </style>
 
 </head>
 <body>
-    <div id="map" style="width: 600px; height: 400px"></div>
+    <div id="map"></div>
 
     <script
         src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
@@ -35,11 +44,6 @@ f.write('''<!DOCTYPE html>
     <script>
 var DebugData = { "type": "FeatureCollection",
     "features": [''')
-
-
-
-
-
 
 
 
