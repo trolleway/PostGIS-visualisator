@@ -50,7 +50,22 @@ var DebugData = { "type": "FeatureCollection",
 # 2. Write SQL here
 
 sql='''
-SELECT ST_AsGeoJSON(ST_Transform(way,4326)) FROM planet_osm_point WHERE highway='bus_stop' AND way &&  ST_MakeEnvelope(4190198,7485130 , 4193868,7487782, 4326); ;
+SELECT ST_ASGeoJSON(ST_Transform(wkb_geometry,4326)) as way FROM 
+(
+
+--write here
+
+SELECT * 
+FROM 
+tablename
+WHERE
+1=1
+LIMIT 100
+
+--write here
+ 
+) AS mainquery ;
+
 '''
 
 
